@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="IMG_2417 4.JPG" alt="Profile Picture" style="width: 80px; height: auto; margin-right: 20px;">
+        <h1>William Chen's Resume</h1>
+        <h6>#Automation Project Manager #Mechanism #R&D Engineer #Solidworks #Machining</h6>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">About Me</a></li>
+                <li><a href="autobiography-cn.html" class="nav-link">Autobiography (中文)</a></li>
+                <li><a href="autobiography-en.html" class="nav-link">Autobiography (English)</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section id="intro-1">
+            <h2>About Me</h2>
+            <h5>Name: William</h5>
+            <h5>Company: HonHai</h5>
+        </section>
+        <section id="intro-2">
+            <br>
+            <br>
+            <h5>Age: 32</h5>
+            <h5>Job Title: Automation Project Manager</h5>
+        </section>
+        <section id="intro-3">
+            <br>
+            <br>
+            <h5>Education: Mechanism Master</h5>
+        </section>
+    </main>
+    <hr> 
+    <main>
+        <section id="Work Experience">
+            <h2>Working Experience</h2>
+        </section>
+        <section id="Working">
+            <div>
+                <p>2019.7 - Present</p>
+                <h3>HonHai</h3>
+                <p>Automation Project Manager</p>
+                <p>1. Mangae over 60x automation project.</p>
+                <p>2. Lead over 30x team member.</p>
+                <p>3. Coordinated with customer and devliver KPI.</p>
+                <p>4. Automation ducument definition.</p>
+            </div>
+            <br>
+            <br>
+            <div>
+                <p>2017.9 - 2019.3</p>
+                <h3>Airtac</h3>
+                <p>Customer Support Engineer</p>
+                <p>1. CNC coding.</p>
+                <p>2. Machning Engineer.</p>
+                <p>3. None-standard product R&D engineers.</p>
+                <p>4. Foreign customer None-standard service..</p>
+            </div>
+        </section>
+    </main>
+    <hr> 
+    <main>
+        <section id="Education">
+            <h2>Education</h2>
+        </section>
+        <section id="Master">
+            <div>
+                <p>2016.9-2018.7</p>
+                <h3>Master</h3>
+                <p>Chung Hsing Unervisity</p>
+                <p>Mechanism Engineer</p>
+            </div>
+            <br>
+            <br>
+            <div>
+                <p>2012.9-2016.7</p>
+                <h3>College</h3>
+                <p>Zhong Yuan Unervisity</p>
+                <p>Mechanism Engineer</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 William Chen's Resume. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const links = document.querySelectorAll('.nav-link');
+
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // 阻止默认行为
+                const targetUrl = this.getAttribute('href');
+
+                // 添加翻页特效
+                document.querySelector('.page').classList.add('page-exit');
+                setTimeout(() => {
+                    window.location.href = targetUrl; // 跳转到目标页面
+                }, 500); // 等待动画结束
+            });
+        });
+    </script>
+</body>
+</html> 
